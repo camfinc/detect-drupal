@@ -1,0 +1,4771 @@
+{
+  "releases": [
+    {
+      "version": "6.0",
+      "jquery": "1.2.3"
+    },
+    {
+      "version": "6.1",
+      "jquery": "1.2.3"
+    },
+    {
+      "version": "6.2",
+      "jquery": "1.2.3"
+    },
+    {
+      "version": "6.3",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.4",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.5",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.6",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.7",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.8",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.9",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.10",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.11",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.12",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.13",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.14",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.15",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.16",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.17",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.18",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.19",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.20",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.21",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.22",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.23",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.24",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.25",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.26",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.27",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.28",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.29",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.30",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.31",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.32",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.33",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.34",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.35",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.36",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.37",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "6.38",
+      "jquery": "1.2.6"
+    },
+    {
+      "version": "7.0",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.1",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.2",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.3",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.4",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.5",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.6",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.7",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.8",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.9",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.10",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.11",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.12",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.13",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.14",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.15",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.16",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.17",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.18",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.19",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.20",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.21",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.22",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.23",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.24",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.25",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.26",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.27",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.28",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.29",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.30",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.31",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.32",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.33",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.34",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.35",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.36",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.37",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.38",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.39",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.40",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.41",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.42",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.43",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.44",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.50",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.51",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.52",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.53",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.54",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.55",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.56",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.57",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.58",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.59",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.60",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.61",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.62",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.63",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.64",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.65",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.66",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.67",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.68",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.69",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.70",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.71",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.72",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.73",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.74",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.75",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.76",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.77",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.78",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.79",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.80",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.81",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.82",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.83",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.84",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.85",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.86",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.87",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.88",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.89",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.90",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.91",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.92",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.93",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.94",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.95",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.96",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.97",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.98",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.99",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.100",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.101",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.102",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "7.103",
+      "jquery": "1.4.4"
+    },
+    {
+      "version": "8.0.0",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.0.1",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.0.2",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.0.3",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.0.4",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.0.5",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.0.6",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.1.0",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.1.1",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.1.2",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.1.3",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.1.4",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.1.5",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.1.6",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.1.7",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.1.8",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.1.9",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.1.10",
+      "jquery": "2.1.4"
+    },
+    {
+      "version": "8.2.0",
+      "jquery": "2.2.3"
+    },
+    {
+      "version": "8.2.1",
+      "jquery": "2.2.3"
+    },
+    {
+      "version": "8.2.2",
+      "jquery": "2.2.3"
+    },
+    {
+      "version": "8.2.3",
+      "jquery": "2.2.3"
+    },
+    {
+      "version": "8.2.4",
+      "jquery": "2.2.3"
+    },
+    {
+      "version": "8.2.5",
+      "jquery": "2.2.3"
+    },
+    {
+      "version": "8.2.6",
+      "jquery": "2.2.3"
+    },
+    {
+      "version": "8.2.7",
+      "jquery": "2.2.3"
+    },
+    {
+      "version": "8.2.8",
+      "jquery": "2.2.3"
+    },
+    {
+      "version": "8.3.0",
+      "jquery": "2.2.4"
+    },
+    {
+      "version": "8.3.1",
+      "jquery": "2.2.4"
+    },
+    {
+      "version": "8.3.2",
+      "jquery": "2.2.4"
+    },
+    {
+      "version": "8.3.3",
+      "jquery": "2.2.4"
+    },
+    {
+      "version": "8.3.4",
+      "jquery": "2.2.4"
+    },
+    {
+      "version": "8.3.5",
+      "jquery": "2.2.4"
+    },
+    {
+      "version": "8.3.6",
+      "jquery": "2.2.4"
+    },
+    {
+      "version": "8.3.7",
+      "jquery": "2.2.4"
+    },
+    {
+      "version": "8.3.8",
+      "jquery": "2.2.4"
+    },
+    {
+      "version": "8.3.9",
+      "jquery": "2.2.4"
+    },
+    {
+      "version": "8.4.0",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.4.1",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.4.2",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.4.3",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.4.4",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.4.5",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.4.6",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.4.7",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.4.8",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.5.0",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.5.1",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.5.2",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.5.3",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.5.4",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.5.5",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.5.6",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.5.7",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.5.8",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.5.9",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.5.10",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.5.11",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.5.12",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.5.13",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.5.14",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.5.15",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.0",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.1",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.2",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.3",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.4",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.5",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.6",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.7",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.8",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.9",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.10",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.11",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.12",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.13",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.14",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.15",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.16",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.17",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.6.18",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.7.0",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.7.1",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.7.2",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.7.3",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.7.4",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.7.5",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.7.6",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.7.7",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.7.8",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.7.9",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.7.10",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.7.11",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.7.12",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.7.13",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.7.14",
+      "jquery": "3.2.1"
+    },
+    {
+      "version": "8.8.0",
+      "jquery": "3.4.1"
+    },
+    {
+      "version": "8.8.1",
+      "jquery": "3.4.1"
+    },
+    {
+      "version": "8.8.2",
+      "jquery": "3.4.1"
+    },
+    {
+      "version": "8.8.3",
+      "jquery": "3.4.1"
+    },
+    {
+      "version": "8.8.4",
+      "jquery": "3.4.1"
+    },
+    {
+      "version": "8.8.5",
+      "jquery": "3.4.1"
+    },
+    {
+      "version": "8.8.6",
+      "jquery": "3.4.1"
+    },
+    {
+      "version": "8.8.7",
+      "jquery": "3.4.1"
+    },
+    {
+      "version": "8.8.8",
+      "jquery": "3.4.1"
+    },
+    {
+      "version": "8.8.9",
+      "jquery": "3.4.1"
+    },
+    {
+      "version": "8.8.10",
+      "jquery": "3.4.1"
+    },
+    {
+      "version": "8.8.11",
+      "jquery": "3.4.1"
+    },
+    {
+      "version": "8.8.12",
+      "jquery": "3.4.1"
+    },
+    {
+      "version": "8.9.0",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.1",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.2",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.3",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.4",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.5",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.6",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.7",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.8",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.9",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.10",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.11",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.12",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.13",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.14",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.15",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.16",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.17",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.18",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.19",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "8.9.20",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.0.0",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.0.1",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.0.2",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.0.3",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.0.4",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.0.5",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.0.6",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.0.7",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.0.8",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.0.9",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.0.10",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.0.11",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.0.12",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.0.13",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.0.14",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.1.0",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.1.1",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.1.2",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.1.3",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.1.4",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.1.5",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.1.6",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.1.7",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.1.8",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.1.9",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.1.10",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.1.11",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.1.12",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.1.13",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.1.14",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.1.15",
+      "jquery": "3.5.1"
+    },
+    {
+      "version": "9.2.0",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.1",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.2",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.3",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.4",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.5",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.6",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.7",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.8",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.9",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.10",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.11",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.12",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.13",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.14",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.15",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.16",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.17",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.18",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.19",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.20",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.2.21",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.0",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.1",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.2",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.3",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.4",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.5",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.6",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.7",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.8",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.9",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.10",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.11",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.12",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.13",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.14",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.15",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.16",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.17",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.18",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.19",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.20",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.21",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.3.22",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.4.0",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.4.1",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.4.2",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.4.3",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.4.4",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.4.5",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.4.6",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.4.7",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.4.8",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.4.9",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.4.10",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.4.11",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.4.12",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.4.13",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.4.14",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.4.15",
+      "jquery": "3.6.0"
+    },
+    {
+      "version": "9.5.0",
+      "jquery": "3.6.2"
+    },
+    {
+      "version": "9.5.1",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "9.5.2",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "9.5.3",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "9.5.4",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "9.5.5",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "9.5.6",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "9.5.7",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "9.5.8",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "9.5.9",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "9.5.10",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "9.5.11",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "10.0.0",
+      "jquery": "3.6.2"
+    },
+    {
+      "version": "10.0.1",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "10.0.2",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "10.0.3",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "10.0.4",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "10.0.5",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "10.0.6",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "10.0.7",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "10.0.8",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "10.0.9",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "10.0.10",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "10.0.11",
+      "jquery": "3.6.3"
+    },
+    {
+      "version": "10.1.0",
+      "jquery": "3.7.0"
+    },
+    {
+      "version": "10.1.1",
+      "jquery": "3.7.0"
+    },
+    {
+      "version": "10.1.2",
+      "jquery": "3.7.0"
+    },
+    {
+      "version": "10.1.3",
+      "jquery": "3.7.0"
+    },
+    {
+      "version": "10.1.4",
+      "jquery": "3.7.0"
+    },
+    {
+      "version": "10.1.5",
+      "jquery": "3.7.0"
+    },
+    {
+      "version": "10.1.6",
+      "jquery": "3.7.0"
+    },
+    {
+      "version": "10.1.7",
+      "jquery": "3.7.0"
+    },
+    {
+      "version": "10.1.8",
+      "jquery": "3.7.0"
+    },
+    {
+      "version": "10.2.0",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.2.1",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.2.2",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.2.3",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.2.4",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.2.5",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.2.6",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.2.7",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.2.8",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.2.9",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.2.10",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.2.11",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.2.12",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.3.0",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.3.1",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.3.2",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.3.3",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.3.4",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.3.5",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.3.6",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.3.7",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.3.8",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.3.9",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.3.10",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.3.11",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.3.12",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.3.13",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.3.14",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.4.0",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.4.1",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.4.2",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.4.3",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.4.4",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.4.5",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.4.6",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.4.7",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.4.8",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.4.9",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.4.10",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.5.0",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.5.1",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.5.2",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.5.3",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.5.4",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.5.5",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.5.6",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.5.7",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.5.8",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.5.9",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.5.10",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.5.11",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.5.12",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.0",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.1",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.2",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.3",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.4",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.5",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.6",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.7",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.8",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.9",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.10",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.11",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.12",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.13",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.14",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.15",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.16",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.17",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "10.6.18",
+      "jquery": "3.7.1"
+    },
+    {
+      "version": "11.0.0",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.0.1",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.0.2",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.0.3",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.0.4",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.0.5",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.0.6",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.0.7",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.0.8",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.0.9",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.0.10",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.0.11",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.0.12",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.0.13",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.1.0",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.1.1",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.1.2",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.1.3",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.1.4",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.1.5",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.1.6",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.1.7",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.1.8",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.1.9",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.1.10",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.2.0",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.2.1",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.2.2",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.2.3",
+      "jquery": "4.0.0-beta.2"
+    },
+    {
+      "version": "11.2.4",
+      "jquery": "4.0.0-rc.1"
+    },
+    {
+      "version": "11.2.5",
+      "jquery": "4.0.0-rc.1"
+    },
+    {
+      "version": "11.2.6",
+      "jquery": "4.0.0-rc.1"
+    },
+    {
+      "version": "11.2.7",
+      "jquery": "4.0.0-rc.1"
+    },
+    {
+      "version": "11.2.8",
+      "jquery": "4.0.0-rc.1"
+    },
+    {
+      "version": "11.2.9",
+      "jquery": "4.0.0-rc.1"
+    },
+    {
+      "version": "11.2.10",
+      "jquery": "4.0.0-rc.1"
+    },
+    {
+      "version": "11.2.11",
+      "jquery": "4.0.0-rc.1"
+    },
+    {
+      "version": "11.2.12",
+      "jquery": "4.0.0-rc.1"
+    },
+    {
+      "version": "11.2.13",
+      "jquery": "4.0.0-rc.1"
+    },
+    {
+      "version": "11.2.14",
+      "jquery": "4.0.0-rc.1"
+    },
+    {
+      "version": "11.3.0",
+      "jquery": "4.0.0-rc.1"
+    },
+    {
+      "version": "11.3.1",
+      "jquery": "4.0.0-rc.1"
+    },
+    {
+      "version": "11.3.2",
+      "jquery": "4.0.0-rc.1"
+    },
+    {
+      "version": "11.3.3",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.3.4",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.3.5",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.3.6",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.3.7",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.3.8",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.3.9",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.3.10",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.3.11",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.3.12",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.3.13",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.3.14",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.3.16",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.3.17",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.3.18",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.4.0",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.4.1",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.4.2",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.4.3",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.4.4",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.4.5",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.4.6",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.4.7",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "11.4.8",
+      "jquery": "4.0.0"
+    },
+    {
+      "version": "12.0.0-alpha1",
+      "jquery": "4.0.0"
+    }
+  ],
+  "facts": {
+    "jsVersionQueryString": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "coreLibrariesVersionConstant": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "settingsJsonScriptTag": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "aggregateIncludeQuery": [
+      [
+        "10.1.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "compressedAjaxPageStateLibraries": [
+      [
+        "10.1.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "generatorMeta": [
+      [
+        "7.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "behaviorsAttachObjects": [
+      [
+        "7.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "drupalJsEnabled": [
+      [
+        "6.0",
+        "6.38"
+      ]
+    ]
+  },
+  "jquery": {
+    "1.2.3": [
+      [
+        "6.0",
+        "6.2"
+      ]
+    ],
+    "1.2.6": [
+      [
+        "6.3",
+        "6.38"
+      ]
+    ],
+    "1.4.4": [
+      [
+        "7.0",
+        "7.103"
+      ]
+    ],
+    "2.1.4": [
+      [
+        "8.0.0",
+        "8.1.10"
+      ]
+    ],
+    "2.2.3": [
+      [
+        "8.2.0",
+        "8.2.8"
+      ]
+    ],
+    "2.2.4": [
+      [
+        "8.3.0",
+        "8.3.9"
+      ]
+    ],
+    "3.2.1": [
+      [
+        "8.4.0",
+        "8.7.14"
+      ]
+    ],
+    "3.4.1": [
+      [
+        "8.8.0",
+        "8.8.12"
+      ]
+    ],
+    "3.5.1": [
+      [
+        "8.9.0",
+        "9.1.15"
+      ]
+    ],
+    "3.6.0": [
+      [
+        "9.2.0",
+        "9.4.15"
+      ]
+    ],
+    "3.6.2": [
+      [
+        "9.5.0",
+        "9.5.0"
+      ],
+      [
+        "10.0.0",
+        "10.0.0"
+      ]
+    ],
+    "3.6.3": [
+      [
+        "9.5.1",
+        "9.5.11"
+      ],
+      [
+        "10.0.1",
+        "10.0.11"
+      ]
+    ],
+    "3.7.0": [
+      [
+        "10.1.0",
+        "10.1.8"
+      ]
+    ],
+    "3.7.1": [
+      [
+        "10.2.0",
+        "10.6.18"
+      ]
+    ],
+    "4.0.0-beta.2": [
+      [
+        "11.0.0",
+        "11.2.3"
+      ]
+    ],
+    "4.0.0-rc.1": [
+      [
+        "11.2.4",
+        "11.3.2"
+      ]
+    ],
+    "4.0.0": [
+      [
+        "11.3.3",
+        "12.0.0-alpha1"
+      ]
+    ]
+  },
+  "markers": [
+    {
+      "name": "Drupal.ACDB",
+      "files": [
+        "misc/autocomplete.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.ahah",
+      "files": [
+        "misc/ahah.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "6.38"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.ahahError",
+      "files": [
+        "misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "6.0",
+          "6.38"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.autocompleteSubmit",
+      "files": [
+        "misc/autocomplete.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.ahah",
+      "files": [
+        "misc/ahah.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "6.38"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.collapse",
+      "files": [
+        "misc/collapse.js",
+        "core/misc/collapse.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "9.5.11"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.multiselectSelector",
+      "files": [
+        "misc/form.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "6.38"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.tableHeader",
+      "files": [
+        "misc/tableheader.js",
+        "core/misc/tableheader.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "10.2.12"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.teaser",
+      "files": [
+        "misc/teaser.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "6.38"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.textarea",
+      "files": [
+        "misc/textarea.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.collapseScrollIntoView",
+      "files": [
+        "misc/collapse.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.encodeURIComponent",
+      "files": [
+        "misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "6.0",
+          "6.38"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.freezeHeight",
+      "files": [
+        "misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "6.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.getSelection",
+      "files": [
+        "misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "6.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.jsAC",
+      "files": [
+        "misc/autocomplete.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.jsEnabled",
+      "files": [
+        "misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "6.0",
+          "6.38"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.parseJson",
+      "files": [
+        "misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "6.0",
+          "6.38"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.progressBar",
+      "files": [
+        "misc/progress.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.settings",
+      "files": [
+        "misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "6.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.tableHeaderDoScroll",
+      "files": [
+        "misc/tableheader.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "6.38"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.tableHeaderOnScroll",
+      "files": [
+        "misc/tableheader.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "6.38"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.tableDragChangedMarker",
+      "files": [
+        "misc/tabledrag.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.tableDragChangedWarning",
+      "files": [
+        "misc/tabledrag.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.tableDragIndentation",
+      "files": [
+        "misc/tabledrag.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.themes",
+      "files": [
+        "misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "6.0",
+          "6.38"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.toggleFieldset",
+      "files": [
+        "misc/collapse.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "6.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.unfreezeHeight",
+      "files": [
+        "misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "6.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.ajax",
+      "files": [
+        "misc/ajax.js",
+        "core/misc/ajax.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.ajaxError",
+      "files": [
+        "misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "7.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.AJAX",
+      "files": [
+        "misc/ajax.js",
+        "core/misc/ajax.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.authorizeFileTransferForm",
+      "files": [
+        "misc/authorize.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.fillUserInfoFromCookie",
+      "files": [
+        "misc/form.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.formUpdated",
+      "files": [
+        "misc/form.js",
+        "core/misc/form.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.machineName",
+      "files": [
+        "misc/machine-name.js",
+        "core/misc/machine-name.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.setTimezone",
+      "files": [
+        "misc/timezone.js",
+        "core/misc/timezone.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.states",
+      "files": [
+        "misc/states.js",
+        "core/misc/states.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.verticalTabs",
+      "files": [
+        "misc/vertical-tabs.js",
+        "core/misc/vertical-tabs.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.detachBehaviors",
+      "files": [
+        "misc/drupal.js",
+        "core/misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "7.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.encodePath",
+      "files": [
+        "misc/drupal.js",
+        "core/misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "7.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.states",
+      "files": [
+        "misc/states.js",
+        "core/misc/states.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.tableHeader",
+      "files": [
+        "misc/tableheader.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.verticalTab",
+      "files": [
+        "misc/vertical-tabs.js",
+        "core/misc/vertical-tabs.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.verticalTab",
+      "files": [
+        "misc/vertical-tabs.js",
+        "core/misc/vertical-tabs.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "jQuery.fn.drupalGetSummary",
+      "files": [
+        "misc/form.js",
+        "core/misc/form.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "jQuery.fn.drupalSetSummary",
+      "files": [
+        "misc/form.js",
+        "core/misc/form.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "jQuery.fn.once",
+      "files": [
+        "misc/jquery.once.js",
+        "core/assets/vendor/jquery-once/jquery.once.js",
+        "core/misc/jquery.once.bc.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "9.5.11"
+        ]
+      ]
+    },
+    {
+      "name": "jQuery.fn.removeOnce",
+      "files": [
+        "misc/jquery.once.js",
+        "core/assets/vendor/jquery-once/jquery.once.js",
+        "core/misc/jquery.once.bc.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.0",
+          "9.5.11"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.formatString",
+      "files": [
+        "misc/drupal.js",
+        "core/misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "7.9",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.absoluteUrl",
+      "files": [
+        "misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "7.39",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.urlIsLocal",
+      "files": [
+        "misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "7.39",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.beforeUnloadCalled",
+      "files": [
+        "misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "7.51",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.displayAjaxError",
+      "files": [
+        "misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "7.51",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.stringReplace",
+      "files": [
+        "misc/drupal.js",
+        "core/misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "7.55",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.sanitizeAjaxUrl",
+      "files": [
+        "misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "7.73",
+          "7.103"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.formSingleSubmit",
+      "files": [
+        "misc/form-single-submit.js",
+        "core/misc/form.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "7.98",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.Ajax",
+      "files": [
+        "core/misc/ajax.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.AjaxCommands",
+      "files": [
+        "core/misc/ajax.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.AjaxError",
+      "files": [
+        "core/misc/ajax.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.announce",
+      "files": [
+        "core/misc/announce.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.autocomplete",
+      "files": [
+        "core/misc/autocomplete.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.activeLinks",
+      "files": [
+        "core/misc/active-link.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.date",
+      "files": [
+        "core/misc/date.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "9.5.11"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.detailsAria",
+      "files": [
+        "core/misc/details-aria.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.dialog",
+      "files": [
+        "core/misc/dialog/dialog.ajax.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.dropButton",
+      "files": [
+        "core/misc/dropbutton/dropbutton.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.drupalAnnounce",
+      "files": [
+        "core/misc/announce.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.drupalDisplace",
+      "files": [
+        "core/misc/displace.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.fillUserInfoFromBrowser",
+      "files": [
+        "core/misc/form.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.tableResponsive",
+      "files": [
+        "core/misc/tableresponsive.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.CollapsibleDetails",
+      "files": [
+        "core/misc/collapse.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "9.5.11"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.debounce",
+      "files": [
+        "core/misc/debounce.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.dialog",
+      "files": [
+        "core/misc/dialog/dialog.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.displace",
+      "files": [
+        "core/misc/displace.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.DropButton",
+      "files": [
+        "core/misc/dropbutton/dropbutton.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.ProgressBar",
+      "files": [
+        "core/misc/progress.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.tabbingManager",
+      "files": [
+        "core/misc/tabbingmanager.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.TableHeader",
+      "files": [
+        "core/misc/tableheader.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "10.2.12"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.TableResponsive",
+      "files": [
+        "core/misc/tableresponsive.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.progressBar",
+      "files": [
+        "core/misc/progress.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.throwError",
+      "files": [
+        "core/misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.url",
+      "files": [
+        "core/misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "8.0.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "jQuery.fn.findOnce",
+      "files": [
+        "core/assets/vendor/jquery-once/jquery.once.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.0.0",
+          "9.5.11"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.entityContentDetailsSummaries",
+      "files": [
+        "core/misc/entity-form.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.3.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.offCanvasEvents",
+      "files": [
+        "core/misc/dialog/off-canvas.js",
+        "core/misc/dialog/off-canvas/js/off-canvas.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.5.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.offCanvas",
+      "files": [
+        "core/misc/dialog/off-canvas.js",
+        "core/misc/dialog/off-canvas/js/off-canvas.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.5.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.ajaxProgressIndicatorFullscreen",
+      "files": [
+        "core/misc/ajax.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.6.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.ajaxProgressMessage",
+      "files": [
+        "core/misc/ajax.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.6.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.ajaxProgressThrobber",
+      "files": [
+        "core/misc/ajax.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.6.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.ajaxWrapperMultipleRootElements",
+      "files": [
+        "core/misc/ajax.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.6.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.ajaxWrapperNewContent",
+      "files": [
+        "core/misc/ajax.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.6.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.Message",
+      "files": [
+        "core/misc/message.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.7.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.message",
+      "files": [
+        "core/misc/message.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.7.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.deprecatedProperty",
+      "files": [
+        "core/misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "8.8.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.deprecationError",
+      "files": [
+        "core/misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "8.8.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.ajaxProgressBar",
+      "files": [
+        "core/misc/ajax.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.8.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.checkbox",
+      "files": [
+        "core/misc/checkbox.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "8.8.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.DatepickerPolyfill",
+      "files": [
+        "core/misc/date.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "9.0.0",
+          "9.5.11"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.dateHelp",
+      "files": [
+        "core/misc/date.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "9.0.0",
+          "9.5.11"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.dateTimeHelp",
+      "files": [
+        "core/misc/date.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "9.0.0",
+          "9.5.11"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.detailsSummary",
+      "files": [
+        "core/misc/details-summarized-content.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "9.1.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.DetailsSummarizedContent",
+      "files": [
+        "core/misc/details-summarized-content.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "9.1.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.detailsSummarizedContentText",
+      "files": [
+        "core/misc/details-summarized-content.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "9.1.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.theme.detailsSummarizedContentWrapper",
+      "files": [
+        "core/misc/details-summarized-content.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "9.1.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "window.once",
+      "files": [
+        "core/assets/vendor/once/once.js",
+        "core/misc/jquery.once.bc.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "9.2.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.timeDiff",
+      "files": [
+        "core/misc/time-diff.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "10.1.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.timeDiff",
+      "files": [
+        "core/misc/time-diff.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "10.1.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.fieldListKeyboardNavigation",
+      "files": [
+        "core/misc/field-list-keyboard-navigation.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "10.2.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.elementIsHidden",
+      "files": [
+        "core/misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "10.2.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.elementIsVisible",
+      "files": [
+        "core/misc/drupal.js"
+      ],
+      "alwaysLoaded": true,
+      "ranges": [
+        [
+          "10.2.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.behaviors.htmx",
+      "files": [
+        "core/misc/htmx/htmx-behaviors.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "11.2.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    },
+    {
+      "name": "Drupal.htmx",
+      "files": [
+        "core/misc/htmx/htmx-utils.js"
+      ],
+      "alwaysLoaded": false,
+      "ranges": [
+        [
+          "11.3.0",
+          "12.0.0-alpha1"
+        ]
+      ]
+    }
+  ],
+  "libraries": {
+    "core/backbone": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/classList": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/ckeditor": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/domready": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/drupal": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupalSettings": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.active-link": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.ajax": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.announce": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.autocomplete": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.batch": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.collapse": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.date": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/drupal.debounce": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.dialog": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.dialog.ajax": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.displace": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.dropbutton": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.form": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.machine-name": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.progress": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.states": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.tabbingmanager": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.tabledrag": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.tableheader": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.tableresponsive": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.tableselect": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.timezone": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.vertical-tabs": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/html5shiv": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/jquery.cookie": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/jquery.farbtastic": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/jquery.form": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/jquery.joyride": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/jquery.once": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/jquery.ui": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/jquery.ui.accordion": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.autocomplete": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/jquery.ui.button": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/jquery.ui.datepicker": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.dialog": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/jquery.ui.draggable": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/jquery.ui.droppable": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.effects.core": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.effects.blind": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.effects.bounce": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.effects.clip": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.effects.drop": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.effects.explode": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.effects.fade": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.effects.fold": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.effects.highlight": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.effects.puff": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.effects.pulsate": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.effects.scale": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.effects.shake": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.effects.size": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.effects.slide": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.effects.transfer": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.menu": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/jquery.ui.mouse": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/jquery.ui.position": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/jquery.ui.progressbar": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.resizable": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/jquery.ui.selectable": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.selectmenu": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.slider": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.sortable": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.spinner": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.tabs": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.tooltip": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.touch-punch": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.widget": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/matchmedia": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/matchmedia.addListener": [
+      [
+        "8.0.0",
+        "8.9.20"
+      ]
+    ],
+    "core/modernizr": [
+      [
+        "8.0.0",
+        "10.6.18"
+      ]
+    ],
+    "core/normalize": [
+      [
+        "8.0.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/picturefill": [
+      [
+        "8.0.0",
+        "10.6.18"
+      ]
+    ],
+    "core/underscore": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "core/drupal.entity-form": [
+      [
+        "8.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/jquery.ui.checkboxradio": [
+      [
+        "8.4.0",
+        "8.9.20"
+      ]
+    ],
+    "core/jquery.ui.controlgroup": [
+      [
+        "8.4.0",
+        "8.9.20"
+      ]
+    ],
+    "core/drupal.dialog.off_canvas": [
+      [
+        "8.5.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.message": [
+      [
+        "8.7.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.checkbox": [
+      [
+        "8.8.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/popperjs": [
+      [
+        "8.8.0",
+        "9.5.11"
+      ]
+    ],
+    "core/sortable": [
+      [
+        "8.8.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.object.assign": [
+      [
+        "8.9.0",
+        "10.6.18"
+      ]
+    ],
+    "core/js-cookie": [
+      [
+        "8.9.0",
+        "11.4.8"
+      ]
+    ],
+    "core/drupal.array.find": [
+      [
+        "9.0.0",
+        "10.6.18"
+      ]
+    ],
+    "core/es6-promise": [
+      [
+        "9.0.0",
+        "10.6.18"
+      ]
+    ],
+    "core/drupal.nodelist.foreach": [
+      [
+        "9.1.0",
+        "10.6.18"
+      ]
+    ],
+    "core/css.escape": [
+      [
+        "9.2.0",
+        "10.6.18"
+      ]
+    ],
+    "core/drupal.element.closest": [
+      [
+        "9.2.0",
+        "10.6.18"
+      ]
+    ],
+    "core/drupal.element.matches": [
+      [
+        "9.2.0",
+        "10.6.18"
+      ]
+    ],
+    "core/shepherd": [
+      [
+        "9.2.0",
+        "9.5.11"
+      ]
+    ],
+    "core/drupal.jquery.position": [
+      [
+        "9.2.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/once": [
+      [
+        "9.2.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/tabbable": [
+      [
+        "9.2.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/tabbable.jquery.shim": [
+      [
+        "9.2.0",
+        "10.6.18"
+      ]
+    ],
+    "core/ckeditor5": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.editorClassic": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.editorDecoupled": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.internal": [
+      [
+        "9.3.0",
+        "9.4.15"
+      ]
+    ],
+    "core/ckeditor5.basic": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.specialCharacters": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.blockquote": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.image": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.link": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.list": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.horizontalLine": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.htmlSupport": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.alignment": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.removeFormat": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.pasteFromOffice": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.indent": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.sourceEditing": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.table": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.language": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/loadjs": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.customevent": [
+      [
+        "9.3.0",
+        "10.6.18"
+      ]
+    ],
+    "core/drupal.string.includes": [
+      [
+        "9.3.0",
+        "10.6.18"
+      ]
+    ],
+    "core/jquery.once.bc": [
+      [
+        "9.3.0",
+        "9.5.11"
+      ]
+    ],
+    "core/ckeditor5.heading": [
+      [
+        "9.3.7",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.translations": [
+      [
+        "9.3.7",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.codeBlock": [
+      [
+        "9.3.10",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/internal.backbone": [
+      [
+        "9.4.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.array.includes": [
+      [
+        "9.4.0",
+        "10.6.18"
+      ]
+    ],
+    "core/drupal.touchevents-test": [
+      [
+        "9.4.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/internal.jquery.form": [
+      [
+        "9.4.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/internal.underscore": [
+      [
+        "9.4.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.style": [
+      [
+        "9.4.6",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.essentials": [
+      [
+        "9.5.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/internal.shepherd": [
+      [
+        "9.5.0",
+        "10.6.18"
+      ]
+    ],
+    "core/ckeditor5.autoformat": [
+      [
+        "10.1.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.tabledrag.ajax": [
+      [
+        "10.1.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.time-diff": [
+      [
+        "10.1.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/internal.jquery_ui": [
+      [
+        "10.1.5",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.showBlocks": [
+      [
+        "10.2.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/transliteration": [
+      [
+        "10.2.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.fieldListKeyboardNavigation": [
+      [
+        "10.2.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/internal.floating-ui": [
+      [
+        "10.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.fieldgroup": [
+      [
+        "11.2.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.htmx": [
+      [
+        "11.2.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.textarea-resize": [
+      [
+        "11.2.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.tablesort": [
+      [
+        "11.2.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/htmx": [
+      [
+        "11.2.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.item-list": [
+      [
+        "11.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/drupal.reset-appearance": [
+      [
+        "11.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "core/ckeditor5.fullscreen": [
+      [
+        "11.4.0",
+        "12.0.0-alpha1"
+      ]
+    ]
+  },
+  "themes": {
+    "marvin": [
+      [
+        "6.0",
+        "6.38"
+      ]
+    ],
+    "chameleon": [
+      [
+        "6.0",
+        "6.38"
+      ]
+    ],
+    "bluemarine": [
+      [
+        "6.0",
+        "6.38"
+      ]
+    ],
+    "pushbutton": [
+      [
+        "6.0",
+        "6.38"
+      ]
+    ],
+    "minnelli": [
+      [
+        "6.0",
+        "6.38"
+      ]
+    ],
+    "garland": [
+      [
+        "6.0",
+        "7.103"
+      ]
+    ],
+    "bartik": [
+      [
+        "7.0",
+        "9.5.11"
+      ]
+    ],
+    "seven": [
+      [
+        "7.0",
+        "9.5.11"
+      ]
+    ],
+    "stark": [
+      [
+        "7.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "stable": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "classy": [
+      [
+        "8.0.0",
+        "9.5.11"
+      ]
+    ],
+    "claro": [
+      [
+        "8.8.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "stable9": [
+      [
+        "9.0.0",
+        "11.4.8"
+      ]
+    ],
+    "olivero": [
+      [
+        "9.1.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "starterkit_theme": [
+      [
+        "9.3.0",
+        "12.0.0-alpha1"
+      ]
+    ],
+    "default_admin": [
+      [
+        "11.4.0",
+        "12.0.0-alpha1"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "name": "detect-drupal",
+  "version": "0.1.0",
+  "description": "Detect Drupal and its core version in the browser or Node: passive page fingerprinting plus optional hash probing of public core files, built from every Drupal core release.",
+  "keywords": [
+    "drupal",
+    "detect",
+    "detection",
+    "fingerprint",
+    "version",
+    "cms",
+    "wappalyzer",
+    "technology-detection"
+  ],
+  "license": "MIT",
+  "author": "CAMF Solutions Inc.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "unpkg": "./dist/detect-drupal.min.js",
+  "jsdelivr": "./dist/detect-drupal.min.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./global": {
+      "import": {
+        "types": "./dist/global.d.ts",
+        "default": "./dist/global.js"
+      },
+      "require": {
+        "types": "./dist/global.d.cts",
+        "default": "./dist/global.cjs"
+      }
+    },
+    "./classic": "./dist/detect-drupal.min.js",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": [
+    "./dist/global.*",
+    "./dist/detect-drupal*.js"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "research": "bun scripts/research.ts",
+    "research:offline": "bun scripts/research.ts --offline",
+    "build": "bun scripts/build.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "test:dist": "bun run build && node test/exports.mjs && node test/ground-truth.mjs",
+    "prepublishOnly": "bun run typecheck && bun test && bun run test:dist"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.2",
+    "happy-dom": "20.14.5",
+    "typescript": "7.0.2"
+  }
+}
