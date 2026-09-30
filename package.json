@@ -4,12 +4,13 @@
   "description": "Detect Drupal and its core version in the browser or Node: page fingerprinting, browser-cache reads of already-loaded core files, and optional hash probing, built from every Drupal core release.",
   "keywords": [
     "drupal",
+    "drupal-version",
     "detect",
     "detection",
     "fingerprint",
     "version",
     "cms",
-    "wappalyzer",
+    "cms-detection",
     "technology-detection"
   ],
   "license": "MIT",
