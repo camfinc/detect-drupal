@@ -211,6 +211,9 @@ distinguishable release groups exist after adding each file (532 releases in tot
 | 47 | `core/modules/navigation/js/admin-toolbar-wrapper.js` | 219 |
 | 48 | `core/modules/outside_in/css/outside_in.motion.css` | 220 |
 
+The hash table also covers 153 more commonly loaded files (misc JS,
+system and core module CSS), which `depth: "cached"` re-reads from the browser cache.
+
 Releases still indistinguishable with every probe file (largest first):
 
 - 8.7.4 … 8.7.14 (11)

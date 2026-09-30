@@ -1,25 +1,46 @@
 /**
- * Passive-only build: reads the current page and never makes a network request.
- * The active (fetch) scan and its probe table are not included, so this is the
- * smallest build and the one to inject into a live page.
+ * No-network build: reads the current page, and optionally re-reads core files the page has
+ * already loaded from the browser cache. It contains no code path that makes a network
+ * request, so it is the one to inject into a live page.
  */
+import { readCached } from "./cached";
 import { collect, failed, verdict } from "./passive";
 import type { DetectDrupalOptions, DrupalDetection } from "./types";
 
-export type PassiveOnlyOptions = Pick<DetectDrupalOptions, "window" | "document">;
+/** `"passive"`: synchronous, page only. `"cached"`: also re-reads already-loaded core files from the browser cache. */
+export type NoNetworkDepth = "passive" | "cached";
 
-/** Detect Drupal from the current page only. Synchronous; never throws; no network. */
-export function detectDrupal(options: PassiveOnlyOptions = {}): DrupalDetection {
-  try {
-    const st = collect({ window: options.window, document: options.document });
-    const depth = (options as DetectDrupalOptions).depth;
-    if (depth !== undefined && depth !== "passive") {
-      st.evidence.push(`depth "${depth}" ignored: this build is passive-only (no network)`);
+export type NoNetworkOptions = Pick<DetectDrupalOptions, "window" | "document"> & { depth?: NoNetworkDepth };
+
+/**
+ * Detect Drupal without any network requests. Never throws and never rejects.
+ * Synchronous for `"passive"` (the default); returns a Promise for `"cached"`.
+ */
+export function detectDrupal(options?: Pick<DetectDrupalOptions, "window" | "document"> & { depth?: "passive" }): DrupalDetection;
+export function detectDrupal(options: Pick<DetectDrupalOptions, "window" | "document"> & { depth: "cached" }): Promise<DrupalDetection>;
+export function detectDrupal(options?: NoNetworkOptions): DrupalDetection | Promise<DrupalDetection>;
+export function detectDrupal(options: NoNetworkOptions = {}): DrupalDetection | Promise<DrupalDetection> {
+  const depth = (options as DetectDrupalOptions).depth ?? "passive";
+  const pageOnly = { window: options.window, document: options.document };
+  if (depth === "passive") {
+    try {
+      return verdict(collect(pageOnly));
+    } catch (e) {
+      return failed(e);
     }
-    return verdict(st);
-  } catch (e) {
-    return failed(e);
   }
+  // Any other depth (including "light"/"standard"/"deep" from plain JS callers) gets the most
+  // this build can do without the network: the cache read.
+  return (async () => {
+    try {
+      const st = collect(pageOnly);
+      if (depth !== "cached") st.evidence.push(`depth "${depth}" limited to "cached": this build makes no network requests`);
+      await readCached(st, {});
+      return verdict(st);
+    } catch (e) {
+      return failed(e);
+    }
+  })();
 }
 
 export default detectDrupal;

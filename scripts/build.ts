@@ -4,9 +4,9 @@
  *   dist/index.js / index.cjs        ESM + CommonJS (no side effects)
  *   dist/global.js / global.cjs      ESM + CommonJS that also register `globalThis.detectDrupal`
  *   dist/detect-drupal.js / .min.js  classic <script> (IIFE) that registers `window.detectDrupal`
- *   dist/passive.js / passive.cjs    passive-only ESM + CommonJS (no network code, no probe table)
+ *   dist/passive.js / passive.cjs    no-network ESM + CommonJS (passive + browser-cache reads)
  *   dist/detect-drupal.passive.js / .passive.min.js
- *                                    passive-only classic script, for injecting into a live page
+ *                                    no-network classic script, for injecting into a live page
  *   dist/*.d.ts / *.d.cts            type declarations
  */
 import { readFileSync, rmSync, writeFileSync } from "node:fs";

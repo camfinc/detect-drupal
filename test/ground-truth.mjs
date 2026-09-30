@@ -16,6 +16,7 @@ import { join, relative } from "node:path";
 import vm from "node:vm";
 import { Window } from "happy-dom";
 import { detectDrupal } from "../dist/index.js";
+import { detectDrupal as detectNoNetwork } from "../dist/passive.js";
 const ROOT = join(import.meta.dirname, "..");
 const FINGERPRINTS_RELEASES = JSON.parse(readFileSync(join(ROOT, "research", "markers.json"), "utf8")).releases.map((r) => r.version);
 const CACHE = join(ROOT, ".cache", "releases");
@@ -42,7 +43,12 @@ function firstExisting(dir, files) {
 }
 
 function makePage(head = "", body = "") {
-  const w = new Window({ url: "https://example.com/node/1" });
+  const w = new Window({
+    url: "https://example.com/node/1",
+    // Never fetch <script src>/<link href> for real: files are injected via vm, and the
+    // browser cache is simulated through window.fetch.
+    settings: { disableJavaScriptFileLoading: true, disableCSSFileLoading: true, handleDisabledFileLoadingAsSuccess: true },
+  });
   w.document.write(`<!doctype html><html><head>${head}</head><body>${body}</body></html>`);
   // happy-dom logs uncaught errors from timers etc.; keep output readable.
   w.console.error = w.console.warn = () => {};
@@ -105,6 +111,35 @@ const versions = readdirSync(CACHE)
   .filter((v) => !only || v === only || v.startsWith(only + "."))
   .sort(cmp);
 
+/**
+ * Core files an ordinary unaggregated page loads: drupal.js/jQuery/once and the system (+ D6/D7
+ * core module) CSS. D8+ JS is left out on purpose: its ?v= query already gives the exact version,
+ * and scenario H is about what the browser cache adds.
+ */
+function loadedFiles(dir, version) {
+  const d8 = major(version) >= 8;
+  const pick = (re, root) => walk(join(dir, root)).map((p) => relative(dir, p)).filter((p) => re.test(p));
+  return d8
+    ? pick(/^core\/modules\/system\/css\/components\/[\w.-]+\.css$/, "core/modules/system/css")
+    : [
+        ...["misc/drupal.js", "misc/jquery.js", "misc/jquery.once.js"].filter((f) => existsSync(join(dir, f))),
+        ...pick(/^modules\/(system|node|user|field)\/(theme\/)?[\w.-]+\.css$/, "modules").filter((p) => !/admin|rtl|maintenance|install/.test(p)),
+      ];
+}
+
+/** window.fetch for a page whose loaded files are in the HTTP cache; any non-cache read is a test failure. */
+function browserCacheFetch(dir, loaded, violations) {
+  return async (url, init) => {
+    if (init?.cache !== "only-if-cached") {
+      violations.push(url);
+      throw new Error("network request from a cache read");
+    }
+    const path = new URL(url).pathname.slice(1);
+    if (!loaded.includes(path)) return new Response("", { status: 504 });
+    return new Response(readFileSync(join(dir, path), "utf8"), { status: 200 });
+  };
+}
+
 /** A fake site that serves one release's files, so active probing can be checked offline. */
 function siteFetch(dir, log) {
   return async (url) => {
@@ -117,7 +152,8 @@ function siteFetch(dir, log) {
 }
 
 const failures = [];
-const width = { A: [], B: [], C: [], D: [], E: [], F: [], G: [] };
+const hWidth7 = [];
+const width = { A: [], B: [], C: [], D: [], E: [], F: [], G: [], H: [] };
 const requests = { E: [], F: [], G: [] };
 const samples = [];
 for (const version of versions) {
@@ -178,6 +214,23 @@ for (const version of versions) {
     w.close();
   }
 
+  // H: unaggregated page, depth "cached": re-read already-loaded core files from the browser
+  // cache. Zero network requests, for both the full and the no-network build.
+  const loaded = loadedFiles(dir, version);
+  const query = d8 ? "t=sx2k1q" : "qz8m1p";
+  const tags = loaded.map((f) => (f.endsWith(".css") ? `<link rel="stylesheet" href="/${f}?${query}">` : `<script src="/${f}?${query}"></script>`)).join("");
+  const violations = [];
+  let h;
+  for (const detect of [detectDrupal, detectNoNetwork]) {
+    w = makePage((d8 ? settingsTag(version) : "") + tags);
+    w.fetch = browserCacheFetch(dir, loaded, violations);
+    h = check("H", await detect({ window: w, document: w.document, depth: "cached" }));
+    if (h.requests !== 0) failures.push({ version, label: "H-requests", result: h });
+    w.close();
+  }
+  if (violations.length) failures.push({ version, label: "H-network", result: { evidence: violations, versionRange: null } });
+  if (!d8) hWidth7.push([version, width.D.at(-1), width.H.at(-1)]);
+
   if (/^(\d+\.\d+\.0|10\.[3-6]\.[1-9]\d*|6\.38|7\.(0|50|103))$/.test(version) && (/\.0$/.test(version) || /^10\.[3-6]\.(4|8)$/.test(version) || !d8)) {
     samples.push([version, a.version, a.versionRange, e.version, e.versionRange, e.requests]);
   }
@@ -189,6 +242,10 @@ for (const [k, xs] of Object.entries(width)) {
   if (!xs.length) continue;
   const req = requests[k] ? `, median requests ${median(requests[k])}, max ${Math.max(...requests[k])}` : "";
   console.log(`  scenario ${k}: median candidate releases ${median(xs)}, worst ${Math.max(...xs)} (n=${xs.length}${req})`);
+}
+if (hWidth7.length) {
+  const med = (i) => median(hWidth7.map((x) => x[i]));
+  console.log(`  Drupal 6/7 HTML-only: median ${med(1)} candidates passive -> ${med(2)} with depth "cached" (0 requests)`);
 }
 const fmt = (r) => (r ? `${r.min} … ${r.max ?? "newer"}` : "-");
 console.log("\nSamples: release | passive (full JS) | deep scan, no page");

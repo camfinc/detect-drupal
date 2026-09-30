@@ -1,7 +1,12 @@
 import { describe, expect, test } from "bun:test";
 import { Window } from "happy-dom";
 import { detectDrupal } from "../src/index";
+import { existsSync, readFileSync } from "node:fs";
+import { join } from "node:path";
+import { FINGERPRINTS } from "../src/fingerprints.generated";
 import { PROBES } from "../src/probes.generated";
+
+const FINGER = FINGERPRINTS.releases;
 
 type Routes = Record<string, { status?: number; body: string; type?: string }>;
 
@@ -101,5 +106,55 @@ describe("hash probes", () => {
     const r = await detectDrupal({ depth: "light", baseUrl: "https://site.test/", fetch: stubFetch(routes).fetch });
     expect(r.evidence.some((e) => e.includes("unknown content"))).toBe(true);
     expect(r.versionRange).toBeNull();
+  });
+});
+
+describe("cached depth (already-loaded files, no network)", () => {
+  const release = (v: string) => join(import.meta.dir, "..", ".cache", "releases", v);
+  const haveCache = existsSync(release("7.50"));
+
+  function cachedPage(version: string, files: string[], query: string) {
+    const dir = release(version);
+    const w = new Window({ url: "https://site.test/node/1" });
+    const tags = files
+      .map((f) => (f.endsWith(".css") ? `<link rel="stylesheet" href="/${f}?${query}">` : `<script src="/${f}?${query}"></script>`))
+      .join("");
+    w.document.write(`<html><head>${tags}</head></html>`);
+    const log: { url: string; init?: RequestInit }[] = [];
+    (w as any).fetch = async (url: string, init?: RequestInit) => {
+      log.push({ url, init });
+      if (init?.cache !== "only-if-cached") throw new Error("network fetch");
+      const path = new URL(url).pathname.slice(1);
+      return existsSync(join(dir, path)) ? new Response(readFileSync(join(dir, path), "utf8")) : new Response("", { status: 504 });
+    };
+    return { w, log };
+  }
+
+  test.skipIf(!haveCache)("Drupal 7: cached misc/*.js + system CSS narrow within 7.x, zero requests", async () => {
+    const { w, log } = cachedPage("7.50", ["misc/drupal.js", "misc/jquery.once.js", "modules/system/system.base.css", "modules/system/system.theme.css"], "o8z1k2");
+    const passive = detectDrupal({ window: w as any, document: w.document as any });
+    const cached = await detectDrupal({ window: w as any, document: w.document as any, depth: "cached" });
+    expect(cached.requests).toBe(0);
+    expect(log.every((l) => l.init?.cache === "only-if-cached")).toBe(true);
+    expect(cached.evidence.some((e) => e.startsWith("cached misc/drupal.js: matches"))).toBe(true);
+    const width = (r: typeof cached) => FINGER.indexOf(r.versionRange!.max ?? "7.103") - FINGER.indexOf(r.versionRange!.min);
+    expect(width(cached)).toBeLessThan(width(passive));
+    expect(FINGER.indexOf(cached.versionRange!.min)).toBeLessThanOrEqual(FINGER.indexOf("7.50"));
+  });
+
+  test("an active depth does not re-request files already read from the cache", async () => {
+    const path = "misc/drupal.js";
+    const w = new Window({ url: "https://site.test/" });
+    w.document.write(`<html><head><script src="/${path}?x"></script></head></html>`);
+    const network: string[] = [];
+    // One fetch for both kinds of read: cache-only reads hit, everything else is "network".
+    const fetch = async (url: string, init?: RequestInit) => {
+      if (init?.cache === "only-if-cached") return new Response("/* cached copy */");
+      network.push(new URL(url).pathname.slice(1));
+      return new Response("", { status: 404 });
+    };
+    const r = await detectDrupal({ window: w as any, document: w.document as any, depth: "standard", fetch });
+    expect(r.evidence.some((e) => e.startsWith(`cached ${path}`))).toBe(true);
+    expect(network).not.toContain(path);
   });
 });

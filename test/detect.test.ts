@@ -193,15 +193,27 @@ describe("exports", () => {
   });
 });
 
-describe("passive-only build", () => {
-  test("same passive result, never async, ignores depth", async () => {
-    const { detectDrupal: passiveOnly } = await import("../src/passive-only");
+describe("no-network build", () => {
+  test("passive is synchronous and matches the main entry", async () => {
+    const { detectDrupal: noNetwork } = await import("../src/passive-only");
     const p = page(`<head><meta name="Generator" content="Drupal 10 (https://www.drupal.org)"></head>`);
-    const r = passiveOnly({ ...p, depth: "deep" } as any);
+    const r = noNetwork(p);
     expect(r).not.toBeInstanceOf(Promise);
     expect(r.major).toBe(10);
     expect(r.requests).toBe(0);
-    expect(r.evidence.some((e) => e.includes("passive-only"))).toBe(true);
-    expect({ ...r, evidence: [] }).toEqual({ ...detectDrupal(p), evidence: [] });
+    expect(r).toEqual(detectDrupal(p));
+  });
+
+  test("active depths are limited to the cache read", async () => {
+    const { detectDrupal: noNetwork } = await import("../src/passive-only");
+    const inits: RequestInit[] = [];
+    const w = new Window({ url: "https://site.test/" });
+    w.document.write(`<html><head><script src="/misc/drupal.js?x"></script></head></html>`);
+    (w as any).fetch = async (_: string, init: RequestInit) => (inits.push(init), new Response("", { status: 504 }));
+    const r = await noNetwork({ window: w as any, document: w.document as any, depth: "deep" } as any);
+    expect(r.requests).toBe(0);
+    expect(inits.length).toBe(1);
+    expect(inits[0]).toMatchObject({ cache: "only-if-cached", mode: "same-origin" });
+    expect(r.evidence.some((e) => e.includes('limited to "cached"'))).toBe(true);
   });
 });

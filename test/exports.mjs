@@ -45,28 +45,33 @@ const active = await pending;
 assert.equal(active.requests, seen.length);
 assert.ok(active.requests > 0 && active.requests <= 2);
 
-// Passive-only entry (ESM + CJS): synchronous, and never touches the network even if asked to.
-const neverFetch = async () => {
-  throw new Error("passive build must not fetch");
+// No-network entry (ESM + CJS): passive is synchronous; any other depth only ever reads the
+// browser cache (fetch with cache: "only-if-cached"), never the network.
+const cacheOnlyFetch = (calls) => async (url, init) => {
+  calls.push(init);
+  if (init?.cache !== "only-if-cached" || init?.mode !== "same-origin") throw new Error("network fetch from no-network build");
+  return new Response("", { status: 504 });
 };
 for (const mod of [await import(resolve("./passive", "import")), require(resolve("./passive", "require").pathname)]) {
   assert.equal(typeof mod.detectDrupal, "function");
   assert.equal(mod.default, mod.detectDrupal);
-  const r = mod.detectDrupal({ window: {}, depth: "deep", baseUrl: "https://site.test/", fetch: neverFetch });
-  assert.equal(typeof r.then, "undefined", "passive build must stay synchronous");
+  const sync = mod.detectDrupal({ window: {} });
+  assert.equal(typeof sync.then, "undefined", "passive depth must stay synchronous");
+  const calls = [];
+  const win = { location: { href: "https://site.test/" }, fetch: cacheOnlyFetch(calls), performance: { getEntriesByType: () => [{ name: "https://site.test/misc/drupal.js?abc" }] } };
+  const r = await mod.detectDrupal({ window: win, depth: "deep" });
   assert.equal(r.requests, 0);
-  assert.ok(r.evidence.some((e) => e.includes("passive-only")));
+  assert.ok(calls.length >= 1 && calls.every((c) => c.cache === "only-if-cached"));
+  assert.ok(r.evidence.some((e) => e.includes('limited to "cached"')));
 }
 
-// Injectable passive classic script: registers the global, no network, no probe table.
+// Injectable no-network classic script: registers the global; its only fetch is cache-only.
 const passiveSrc = readFileSync(resolve("./classic-passive"), "utf8");
-assert.ok(!/\bfetch\b/.test(passiveSrc), "passive classic build contains fetch code");
-assert.ok(!passiveSrc.includes("core/misc/ajax.js"), "passive classic build contains the probe table");
+assert.equal((passiveSrc.match(/only-if-cached/g) ?? []).length, 1, "expected exactly one cache-only fetch");
+assert.ok(!/redirect:\s*"follow"|CHANGELOG\.txt|system\.info\.yml/.test(passiveSrc), "active (network) scan code leaked into the no-network build");
 const pctx = vm.createContext({ URL });
 vm.runInContext(passiveSrc, pctx);
 assert.equal(typeof pctx.detectDrupal, "function");
-const pr = pctx.detectDrupal({ depth: "deep", baseUrl: "https://site.test/", fetch: neverFetch });
-assert.equal(typeof pr.then, "undefined");
-assert.equal(pr.requests, 0);
+assert.equal(typeof pctx.detectDrupal().then, "undefined");
 
 console.log("All entry points OK:", Object.keys(pkg.exports).join(", "));

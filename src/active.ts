@@ -1,7 +1,7 @@
+import { resolveBase } from "./base";
 import { FINGERPRINTS } from "./fingerprints.generated";
-import { assetHash } from "./hash";
-import { PROBES } from "./probes.generated";
-import { isObj, parts, safe, W_EXACT, W_PRERELEASE, W_PROBE, W_PROBE_MISSING, type State } from "./passive";
+import { parts, W_EXACT, W_PRERELEASE, W_PROBE_MISSING, type State } from "./passive";
+import { hashIndex, matchFile } from "./table";
 import type { DetectDepth, DetectDrupalOptions } from "./types";
 
 /** Hard cap so a `"deep"` scan stays polite. */
@@ -9,23 +9,7 @@ const MAX_REQUESTS = 40;
 
 export function budgetFor(depth: DetectDepth): number {
   if (typeof depth === "number") return Math.max(0, Math.min(MAX_REQUESTS, Math.floor(depth)));
-  return { passive: 0, light: 2, standard: 5, deep: MAX_REQUESTS }[depth] ?? 0;
-}
-
-/** Where the site root is: explicit option, Drupal's own base path, drupal.js location, or `/`. */
-function resolveBase(options: DetectDrupalOptions, st: State): string | null {
-  const href = safe(() => (st.win?.location?.href as string | undefined) ?? st.doc?.location?.href);
-  const abs = (u: string) => safe(() => new URL(u, href).href) ?? null;
-  if (options.baseUrl) return abs(options.baseUrl.endsWith("/") ? options.baseUrl : options.baseUrl + "/");
-  if (!href) return null;
-  const s = st.settings;
-  const fromSettings = safe(() => (isObj(s?.path) ? s!.path.baseUrl : s?.basePath));
-  if (typeof fromSettings === "string" && fromSettings.startsWith("/")) return abs(fromSettings);
-  for (const u of st.urls) {
-    const m = /^(.*?\/)(?:core\/)?misc\/drupal\.js(?:[?#]|$)/.exec(u);
-    if (m) return abs(m[1]!);
-  }
-  return abs("/");
+  return { passive: 0, cached: 0, light: 2, standard: 5, deep: MAX_REQUESTS }[depth] ?? 0;
 }
 
 type Fetched = { status: number; text: string | null };
@@ -77,21 +61,6 @@ function pickProbe(candidates: number[], tried: Set<string>, hashIndex: Map<stri
   return best;
 }
 
-let hashIndexCache: Map<string, Map<number, string>> | undefined;
-/** probes table -> path -> (release index -> hash), built once on first use. */
-function hashIndex(): Map<string, Map<number, string>> {
-  if (hashIndexCache) return hashIndexCache;
-  hashIndexCache = new Map();
-  for (const [path, hashes] of Object.entries(PROBES)) {
-    const byRelease = new Map<number, string>();
-    for (const [h, ranges] of Object.entries(hashes)) {
-      for (let r = 0; r < ranges.length; r += 2) for (let i = ranges[r]!; i <= ranges[r + 1]!; i++) byRelease.set(i, h);
-    }
-    hashIndexCache.set(path, byRelease);
-  }
-  return hashIndexCache;
-}
-
 /** Files that state the exact version, when a site forgot to hide them. */
 async function probeExact(base: string, options: DetectDrupalOptions, st: State): Promise<void> {
   const majors = new Set(st.c.best().map((i) => st.c.majors[i]!));
@@ -116,8 +85,11 @@ async function probeExact(base: string, options: DetectDrupalOptions, st: State)
   }
 }
 
-/** Active scan: request public core files and match their hashes against every known release. */
-export async function probe(st: State, options: DetectDrupalOptions, depth: DetectDepth): Promise<State> {
+/**
+ * Active scan: request public core files and match their hashes against every known release.
+ * `tried` holds paths already read (e.g. from the browser cache), which are not requested again.
+ */
+export async function probe(st: State, options: DetectDrupalOptions, depth: DetectDepth, tried = new Set<string>()): Promise<State> {
   const budget = budgetFor(depth);
   if (budget === 0 || st.exact) return st;
   const base = resolveBase(options, st);
@@ -128,8 +100,6 @@ export async function probe(st: State, options: DetectDrupalOptions, depth: Dete
   if (depth === "deep") await probeExact(base, options, st);
 
   const index = hashIndex();
-  const tried = new Set<string>();
-  let matched = false;
   while (!st.exact && st.requests < budget) {
     // Keep pre-releases that only lose on the "prefer stable" tie-breaker in play.
     const candidates = st.c.best(W_PRERELEASE);
@@ -147,15 +117,7 @@ export async function probe(st: State, options: DetectDrupalOptions, depth: Dete
       }
       continue;
     }
-    const ranges = PROBES[path]![assetHash(text)];
-    if (!ranges) {
-      st.evidence.push(`probe ${path}: unknown content (patched, or newer than the fingerprint data)`);
-      continue;
-    }
-    if (!matched) st.score += 100; // a byte-identical core file is proof of Drupal
-    matched = true;
-    st.evidence.push(`probe ${path}: matches known release(s)`);
-    st.c.inRanges(W_PROBE, ranges);
+    matchFile(st, path, text, "probe");
   }
   return st;
 }

@@ -1,4 +1,4 @@
-// Classic <script> / injectable entry, passive only: registers window.detectDrupal, no network code.
+// Injectable classic script without network access: registers window.detectDrupal (passive + cached depths).
 import { detectDrupal } from "./passive-only";
 import { setGlobal } from "./set-global";
 

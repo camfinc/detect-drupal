@@ -14,6 +14,8 @@ export interface State {
   settings: AnyObj | null;
   urls: string[];
   requests: number;
+  /** A fetched or cached core file matched a known release byte for byte. */
+  fileMatched?: boolean;
 }
 
 

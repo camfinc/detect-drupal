@@ -1,7 +1,7 @@
 {
   "name": "detect-drupal",
   "version": "0.1.0",
-  "description": "Detect Drupal and its core version in the browser or Node: passive page fingerprinting plus optional hash probing of public core files, built from every Drupal core release.",
+  "description": "Detect Drupal and its core version in the browser or Node: page fingerprinting, browser-cache reads of already-loaded core files, and optional hash probing, built from every Drupal core release.",
   "keywords": [
     "drupal",
     "detect",

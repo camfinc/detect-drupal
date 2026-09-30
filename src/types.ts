@@ -19,13 +19,15 @@ export type ProbeTable = Record<string, Record<string, number[]>>;
  * How hard to look.
  *
  * - `"passive"` (default): guesswork from what is already on the page. Synchronous, no network.
- * - `"light"`: plus up to 2 requests for the most telling core files.
+ * - `"cached"`: plus re-reading core files the page already loaded from the browser cache
+ *   (`fetch` with `cache: "only-if-cached"`), and matching their hashes. No network.
+ * - `"light"`: cached, plus up to 2 requests for the most telling core files.
  * - `"standard"`: plus up to 5 requests.
  * - `"deep"`: keep requesting core files while they still narrow the version, and try the
  *   files that state the exact version (`CHANGELOG.txt` on 6/7, packaged `.info.yml` on 8+).
  * - a number: a custom request budget.
  */
-export type DetectDepth = "passive" | "light" | "standard" | "deep" | number;
+export type DetectDepth = "passive" | "cached" | "light" | "standard" | "deep" | number;
 
 export interface DetectDrupalOptions {
   /** Window to inspect. Defaults to the global `window`. */
