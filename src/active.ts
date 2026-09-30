@@ -61,28 +61,30 @@ function pickProbe(candidates: number[], tried: Set<string>, hashIndex: Map<stri
   return best;
 }
 
-/** Files that state the exact version, when a site forgot to hide them. */
-async function probeExact(base: string, options: DetectDrupalOptions, st: State): Promise<void> {
-  const majors = new Set(st.c.best().map((i) => st.c.majors[i]!));
-  const tries: [string, RegExp][] = [];
-  if ([...majors].some((m) => m < 8)) tries.push(["CHANGELOG.txt", /^Drupal (\d+\.\d+)(?:[.,\s]|$)/m]);
-  if ([...majors].some((m) => m >= 8)) {
-    tries.push(["core/modules/system/system.info.yml", /^version:\s*['"]?(\d+\.\d+\.\d+(?:-[\w.]+)?)['"]?\s*$/m]);
-  }
-  for (const [path, re] of tries) {
-    const { status, text } = await get(base + path, options, st);
-    const v = text ? re.exec(text)?.[1] : undefined;
-    if (!v) {
-      st.evidence.push(`probe ${path}: ${status === 200 ? "no version" : status ? `HTTP ${status}` : "unreachable"}`);
-      continue;
-    }
-    st.exact = v;
-    st.score += 100;
-    st.evidence.push(`probe ${path}: version ${v}`);
-    const idx = FINGERPRINTS.releases.indexOf(v);
-    st.c.constrain(W_EXACT, (i) => (idx >= 0 ? i === idx : st.c.majors[i] === parts(v)[0]));
+/**
+ * Drupal 6/7 ship CHANGELOG.txt in the web root and serve it by default; its first entry is
+ * the exact version. Only requested once the evidence says 6/7: on 8+ the file is under core/
+ * and carries no version, so asking for it would be a pointless request. Non-public files
+ * (e.g. *.info.yml, blocked by Drupal's own .htaccess) are never requested.
+ */
+async function probeChangelog(base: string, options: DetectDrupalOptions, st: State): Promise<void> {
+  const path = "CHANGELOG.txt";
+  const { status, text } = await get(base + path, options, st);
+  const v = text ? /^Drupal (\d+\.\d+)(?:[.,\s]|$)/m.exec(text)?.[1] : undefined;
+  if (!v || parts(v)[0]! >= 8) {
+    st.evidence.push(`probe ${path}: ${status === 200 ? "no version" : status ? `HTTP ${status}` : "unreachable"}`);
     return;
   }
+  st.exact = v;
+  st.score += 100;
+  st.evidence.push(`probe ${path}: version ${v}`);
+  const idx = FINGERPRINTS.releases.indexOf(v);
+  st.c.constrain(W_EXACT, (i) => (idx >= 0 ? i === idx : st.c.majors[i] === parts(v)[0]));
+}
+
+/** True when every remaining candidate is Drupal 6 or 7. */
+function onlyLegacy(st: State): boolean {
+  return st.c.best().every((i) => st.c.majors[i]! < 8);
 }
 
 /**
@@ -97,7 +99,13 @@ export async function probe(st: State, options: DetectDrupalOptions, depth: Dete
     st.evidence.push("active scan skipped: no base URL (pass options.baseUrl)");
     return st;
   }
-  if (depth === "deep") await probeExact(base, options, st);
+  let changelogTried = false;
+  const tryChangelog = async () => {
+    if (depth !== "deep" || changelogTried || st.exact || !onlyLegacy(st) || st.c.best().length <= 1) return;
+    changelogTried = true;
+    await probeChangelog(base, options, st);
+  };
+  await tryChangelog(); // page already says 6/7
 
   const index = hashIndex();
   while (!st.exact && st.requests < budget) {
@@ -118,7 +126,9 @@ export async function probe(st: State, options: DetectDrupalOptions, depth: Dete
       continue;
     }
     matchFile(st, path, text, "probe");
+    await tryChangelog(); // hash probes just showed 6/7
   }
+  await tryChangelog();
   return st;
 }
 

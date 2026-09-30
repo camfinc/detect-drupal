@@ -71,24 +71,27 @@ describe("exact-version files (deep)", () => {
     expect(r.versionRange).toEqual({ min: "7.101", max: "7.101" });
   });
 
-  test("packaged system.info.yml on Drupal 8+", async () => {
-    const { fetch } = stubFetch({
-      "/sub/core/modules/system/system.info.yml": {
-        body: "name: System\ntype: module\nversion: VERSION\n\n# Information added by Drupal.org packaging script on 2024-10-03\nversion: '10.3.6'\nproject: 'drupal'\n",
-      },
-    });
-    const r = await detectDrupal({ depth: "deep", baseUrl: "https://site.test/sub", fetch });
-    expect(r.version).toBe("10.3.6");
-    expect(r.isDrupal).toBe(true);
+  test("Drupal 8+: a deep scan only ever requests public JS/CSS files", async () => {
+    const w = new Window({ url: "https://site.test/node/1" });
+    w.document.write(`<html><head><meta name="Generator" content="Drupal 11 (https://www.drupal.org)"></head></html>`);
+    const { fetch, log } = stubFetch({});
+    const r = await detectDrupal({ window: w as any, document: w.document as any, depth: "deep", fetch });
+    expect(r.requests).toBeGreaterThan(0);
+    expect(log.filter((p) => !/\.(js|css)$/.test(p))).toEqual([]);
   });
 
-  test("Composer-built sites (version: VERSION only) fall through to hash probes", async () => {
+  test("CHANGELOG.txt is requested only once hash probes show Drupal 6/7", async () => {
+    // Serve the real 7.101 misc/drupal.js so its hash matches a known release.
+    const real = join(import.meta.dir, "..", ".cache", "releases", "7.101", "misc/drupal.js");
+    if (!existsSync(real)) return; // needs the research cache
     const { fetch, log } = stubFetch({
-      "/core/modules/system/system.info.yml": { body: "name: System\ntype: module\nversion: VERSION\n" },
+      "/misc/drupal.js": { body: readFileSync(real, "utf8") },
+      "/CHANGELOG.txt": { body: "\nDrupal 7.101, 2024-06-05\n----\n" },
     });
     const r = await detectDrupal({ depth: "deep", baseUrl: "https://site.test/", fetch });
-    expect(r.version).toBeNull();
-    expect(log.length).toBeGreaterThan(2);
+    expect(log).toContain("/CHANGELOG.txt");
+    expect(log.indexOf("/CHANGELOG.txt")).toBeGreaterThan(log.indexOf("/misc/drupal.js"));
+    expect(r.version).toBe("7.101");
   });
 });
 

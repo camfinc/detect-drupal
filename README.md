@@ -24,7 +24,7 @@ detectDrupal();
 
 await detectDrupal({ depth: "deep" }); // e.g. on new.drupal.org
 // { isDrupal: true, version: "11.4", major: 11, versionRange: { min: "11.4.6", max: "11.4.7" },
-//   confidence: 100, evidence: [...], requests: 5 }
+//   confidence: 100, evidence: [...], requests: 3 }
 ```
 
 ## Install
@@ -135,7 +135,7 @@ Those requests go to the page's own origin.
 | `"cached"`            | 0              | Also re-reads core files the page already loaded from the browser cache and matches their hashes. |
 | `"light"`             | up to 2        | Cached, plus fetches the core files that best split the remaining candidate versions. |
 | `"standard"`          | up to 5        | Same, with a bigger budget. |
-| `"deep"`              | as many as help (max 40, typically 4–7) | Tries the files that state the exact version, then keeps probing until nothing narrows further. |
+| `"deep"`              | as many as help (max 40, typically 3–7) | Keeps probing until nothing narrows further. On Drupal 6/7 it also reads the stock `CHANGELOG.txt`, which states the exact version. |
 | a number              | that many      | Custom request budget. |
 
 Every depth other than `"passive"` returns a Promise; `await` works for all of them. Active
@@ -143,7 +143,10 @@ depths start with the free cache read, and never request a file they already rea
 are chosen adaptively: each request goes to the file whose content best separates the versions still
 in the running.
 
-Active probes request plain static files (`core/misc/ajax.js`, theme CSS, …) from the site root.
+Active probes only request files Drupal serves to every visitor anyway: core JS and CSS
+(`core/misc/ajax.js`, theme CSS, …) from the site root. On Drupal 6/7 sites, `"deep"` also reads
+the stock `CHANGELOG.txt`, which those versions serve by default. It never asks for
+configuration or PHP files such as `*.info.yml`, which Drupal's `.htaccess` blocks.
 They send the page's own cookies only for same-origin requests. From a browser page, requests to
 another origin are subject to CORS; in Node there is no such restriction.
 
@@ -187,7 +190,7 @@ result.
 | Signal | Tells us |
 | --- | --- |
 | `?v=X.Y.Z` on unaggregated core JS | exact version (8.0+) |
-| Exact version in `CHANGELOG.txt` (6/7) or a packaged `system.info.yml` (8+) | exact version, when the site exposes them (deep only) |
+| First entry of the stock `CHANGELOG.txt` (6/7 only, deep only) | exact version |
 | Content hash of a public core file | the releases that shipped that exact file |
 | `<meta name="Generator" content="Drupal N">` | major version (7.0+) |
 | `core/…` vs `misc/drupal.js` paths, `drupalSettings` vs `Drupal.settings`, `data-drupal-*` | 8+ vs 6/7 |
@@ -209,13 +212,13 @@ serving that release's files. The reported range contains the true release in ev
 | `"light"` on a page with Drupal's JS | 4 | 2 |
 | `"standard"` on an HTML-only page | 3 | ≤ 5 |
 | `"cached"`, Drupal 6/7 page (HTML only, JS not run) | 11 (passive alone: 99) | 0 |
-| `"deep"` from Node, no page at all | 3 (worst: 11) | median 5, max 9 |
+| `"deep"` from Node, no page at all | 3 (worst: 11) | median 3, max 8 |
 
 On live sites:
 
-- **www.drupal.org** (Drupal 7): `"deep"` gives exactly `7.103` in 1 request, from its
-  `CHANGELOG.txt`.
-- **new.drupal.org** (Drupal 11): `"deep"` gives `11.4.6 – 11.4.7` in 5 requests.
+- **www.drupal.org** (Drupal 7): `"deep"` gives exactly `7.103` in 3 requests. Two core files
+  establish Drupal 7, then its stock `CHANGELOG.txt` gives the exact version.
+- **new.drupal.org** (Drupal 11): `"deep"` gives `11.4.6 – 11.4.7` in 3 requests, all core JS/CSS.
 
 ## Limitations
 
@@ -228,8 +231,6 @@ On live sites:
   ignored. Blocked requests (403, timeouts) are ignored too. A plain 404 counts as weak evidence
   that the file isn't part of that release, so a site that 404s everything under `/core/` gets
   less precise active results.
-- Drupal's default `.htaccess` blocks `.yml` files, so the `system.info.yml` check mostly works on
-  misconfigured servers. Composer-built sites carry no version in that file at all.
 - Versions released after this package was built appear as "newer" (`max: null`) until the
   fingerprints are refreshed.
 
