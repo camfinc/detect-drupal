@@ -303,6 +303,19 @@ export function collect(options: DetectDrupalOptions): State {
   return state();
 }
 
+/** Result for an unexpected error: pages can define hostile getters/proxies; never break the host page. */
+export function failed(e: unknown): DrupalDetection {
+  return {
+    isDrupal: false,
+    version: null,
+    major: null,
+    versionRange: null,
+    confidence: 0,
+    evidence: [`detection error: ${e instanceof Error ? e.message : String(e)}`],
+    requests: 0,
+  };
+}
+
 /** Turn the collected evidence into the public result. */
 export function verdict(st: State): DrupalDetection {
   const fp = FINGERPRINTS;

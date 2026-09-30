@@ -1,6 +1,4 @@
 import { afterEach, describe, expect, test } from "bun:test";
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
 import { Window } from "happy-dom";
 import detectDefault, { detectDrupal, register } from "../src/index";
 
@@ -193,11 +191,17 @@ describe("exports", () => {
     const t2: any = { detectDrupal: other };
     expect(register(t2) as unknown).toBe(other);
   });
+});
 
-  test("classic IIFE build registers window.detectDrupal", () => {
-    const src = readFileSync(join(import.meta.dir, "..", "dist", "detect-drupal.min.js"), "utf8");
-    (0, eval)(src);
-    expect(typeof (globalThis as any).detectDrupal).toBe("function");
-    expect((globalThis as any).detectDrupal({ window: {} }).isDrupal).toBe(false);
+describe("passive-only build", () => {
+  test("same passive result, never async, ignores depth", async () => {
+    const { detectDrupal: passiveOnly } = await import("../src/passive-only");
+    const p = page(`<head><meta name="Generator" content="Drupal 10 (https://www.drupal.org)"></head>`);
+    const r = passiveOnly({ ...p, depth: "deep" } as any);
+    expect(r).not.toBeInstanceOf(Promise);
+    expect(r.major).toBe(10);
+    expect(r.requests).toBe(0);
+    expect(r.evidence.some((e) => e.includes("passive-only"))).toBe(true);
+    expect({ ...r, evidence: [] }).toEqual({ ...detectDrupal(p), evidence: [] });
   });
 });

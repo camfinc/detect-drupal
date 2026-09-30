@@ -41,7 +41,18 @@
         "default": "./dist/global.cjs"
       }
     },
+    "./passive": {
+      "import": {
+        "types": "./dist/passive.d.ts",
+        "default": "./dist/passive.js"
+      },
+      "require": {
+        "types": "./dist/passive.d.cts",
+        "default": "./dist/passive.cjs"
+      }
+    },
     "./classic": "./dist/detect-drupal.min.js",
+    "./classic-passive": "./dist/detect-drupal.passive.min.js",
     "./package.json": "./package.json"
   },
   "sideEffects": [

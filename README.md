@@ -8,6 +8,8 @@ in Node.
 - **Active** on request: fetches a few public core files and matches their content hashes against
   every Drupal core release ever published. This usually narrows a site down to a patch range, or
   the exact version.
+- A **passive-only build** (6.9 kB gzipped) to inject into a live page. It contains no network
+  code at all.
 - Fingerprints are **generated from the real releases**, not written by hand: all 532 core
   tarballs from 6.0 to 12.0.0-alpha1 are downloaded, diffed and hashed.
 
@@ -66,6 +68,16 @@ register();
 
 The main entry has no side effects, so bundlers can tree-shake it.
 
+**Passive-only (no network code)**
+
+```js
+import { detectDrupal } from "detect-drupal/passive"; // CommonJS: require("detect-drupal/passive")
+```
+
+It has the same passive detection as the main entry, but the active scan and its probe table are
+left out of the bundle. It is always synchronous, never makes a request, and its types don't
+accept `depth`.
+
 **Node: check any site by URL**
 
 There is no page to read in Node, so detection relies on active probing alone.
@@ -75,6 +87,30 @@ import { detectDrupal } from "detect-drupal";
 
 const result = await detectDrupal({ depth: "deep", baseUrl: "https://www.example.com/" });
 ```
+
+## Injecting into a live page
+
+`dist/detect-drupal.passive.min.js` is a self-contained script (6.9 kB gzipped) that registers
+`window.detectDrupal` on whatever page it runs in. It only reads the page, never fetches
+anything, and won't overwrite an existing `window.detectDrupal`.
+
+| Where | How |
+| --- | --- |
+| DevTools console | Paste the file's contents, then run `detectDrupal()`. |
+| Script tag | `<script src="https://cdn.jsdelivr.net/npm/detect-drupal/dist/detect-drupal.passive.min.js"></script>` |
+| Browser extension | `chrome.scripting.executeScript({ target: { tabId }, world: "MAIN", files: ["detect-drupal.passive.min.js"] })`, then read the result with a second `executeScript` in the `MAIN` world. |
+| Puppeteer / Playwright | `await page.addScriptTag({ path: require.resolve("detect-drupal/classic-passive") })`, then `await page.evaluate(() => detectDrupal())`. |
+
+Two caveats:
+
+- **Use the page's main world.** Extension content scripts run in an isolated world by default,
+  where `window.Drupal` and `drupalSettings` are not visible. Only the DOM signals would work
+  there.
+- **Content Security Policy.** Strict CSPs block script tags from a CDN. The console, extension
+  `MAIN`-world injection and automation tools are not affected.
+
+`dist/detect-drupal.min.js` is the full classic build (14.9 kB gzipped). Use it when the page
+should also be able to run active scans (`await detectDrupal({ depth: "light" })`).
 
 ## Depth
 
@@ -103,7 +139,7 @@ during SSR.
 
 | Option     | Default                  | |
 | ---------- | ------------------------ | --- |
-| `depth`    | `"passive"`              | See [Depth](#depth). |
+| `depth`    | `"passive"`              | See [Depth](#depth). Not available in the passive-only build. |
 | `window`   | global `window`          | Window-like object to inspect, e.g. an iframe's `contentWindow`. |
 | `document` | `window.document`        | Document to inspect. |
 | `baseUrl`  | the site's own base path | Site root for active probes. Required in Node. |

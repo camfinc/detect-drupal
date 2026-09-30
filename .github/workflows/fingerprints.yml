@@ -1,0 +1,106 @@
+name: Fingerprints
+
+# Full verification against every Drupal core release, plus a weekly check for new releases.
+# Needs ~2 GB of release downloads (cached between runs), so it is kept out of the regular CI.
+on:
+  schedule:
+    - cron: "17 6 * * 1" # Mondays 06:17 UTC
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "src/**"
+      - "scripts/research.ts"
+      - "test/ground-truth.mjs"
+      - ".github/workflows/fingerprints.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fingerprints-${{ github.ref }}
+  cancel-in-progress: true
+
+# Bump the "x2" together with EXTRACT_VERSION in scripts/research.ts.
+env:
+  CACHE_PREFIX: drupal-releases-x2-
+
+jobs:
+  ground-truth:
+    name: Research + ground truth (all releases)
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: 1.3.10
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 22
+
+      # The research script's archive filters are libarchive (bsdtar) syntax; GNU tar lacks them.
+      - name: Install bsdtar
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq libarchive-tools
+
+      - run: bun install --frozen-lockfile
+
+      # Keyed by the committed release list; falls back to the newest cache for this extraction format.
+      - name: Restore release downloads
+        id: cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .cache/releases
+          key: ${{ env.CACHE_PREFIX }}${{ hashFiles('research/markers.json') }}
+          restore-keys: ${{ env.CACHE_PREFIX }}
+
+      - name: Research (downloads only releases missing from the cache)
+        run: bun run research
+
+      # Save only when the release list changed (i.e. new releases were downloaded).
+      - name: Save release downloads
+        if: steps.cache.outputs.cache-matched-key != format('{0}{1}', env.CACHE_PREFIX, hashFiles('research/markers.json'))
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .cache/releases
+          key: ${{ env.CACHE_PREFIX }}${{ hashFiles('research/markers.json') }}
+
+      - run: bun run build
+
+      - name: Entry points under Node
+        run: node test/exports.mjs
+
+      - name: Ground truth against every release
+        run: node test/ground-truth.mjs
+
+      - name: Check committed fingerprints are current
+        id: stale
+        run: |
+          if git diff --quiet -- src/fingerprints.generated.ts src/probes.generated.ts research/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Fingerprints are up to date." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "::warning title=Fingerprints are stale::New Drupal releases change the fingerprints. Run 'bun run research' and commit src/*.generated.ts and research/ (or use the 'fingerprints' artifact)."
+            {
+              echo "### Fingerprints are stale"
+              echo
+              echo "Run \`bun run research\` and commit the result, or download the \`fingerprints\` artifact."
+              echo
+              echo '```'
+              git diff --stat -- src/fingerprints.generated.ts src/probes.generated.ts research/
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload regenerated fingerprints
+        if: steps.stale.outputs.changed == 'true'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: fingerprints
+          path: |
+            src/fingerprints.generated.ts
+            src/probes.generated.ts
+            research/
+          retention-days: 30

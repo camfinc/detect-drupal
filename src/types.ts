@@ -10,9 +10,10 @@ export interface Fingerprints {
   libraries: Record<string, number[]>;
   themes: Record<string, number[]>;
   facts: Record<string, number[]>;
-  /** Public asset path (relative to the site base) -> content hash -> release ranges. */
-  probes: Record<string, Record<string, number[]>>;
 }
+
+/** Public asset path (relative to the site base) -> content hash -> release ranges. */
+export type ProbeTable = Record<string, Record<string, number[]>>;
 
 /**
  * How hard to look.

@@ -4,6 +4,9 @@
  *   dist/index.js / index.cjs        ESM + CommonJS (no side effects)
  *   dist/global.js / global.cjs      ESM + CommonJS that also register `globalThis.detectDrupal`
  *   dist/detect-drupal.js / .min.js  classic <script> (IIFE) that registers `window.detectDrupal`
+ *   dist/passive.js / passive.cjs    passive-only ESM + CommonJS (no network code, no probe table)
+ *   dist/detect-drupal.passive.js / .passive.min.js
+ *                                    passive-only classic script, for injecting into a live page
  *   dist/*.d.ts / *.d.cts            type declarations
  */
 import { readFileSync, rmSync, writeFileSync } from "node:fs";
@@ -26,19 +29,24 @@ async function build(opts: Parameters<typeof Bun.build>[0]) {
 }
 
 // One entry per build: multi-entry builds share chunks, which we do not want here.
-for (const name of ["index", "global"]) {
-  const entrypoints = [join(ROOT, `src/${name}.ts`)];
+for (const name of ["index", "global", "passive"]) {
+  const entrypoints = [join(ROOT, `src/${name === "passive" ? "passive-only" : name}.ts`)];
   await build({ entrypoints, outdir: DIST, format: "esm", naming: `${name}.js` });
   await build({ entrypoints, outdir: DIST, format: "cjs", naming: `${name}.cjs` });
 }
-for (const minify of [false, true]) {
-  await build({
-    entrypoints: [join(ROOT, "src/classic.ts")],
-    outdir: DIST,
-    format: "iife",
-    minify,
-    naming: minify ? "detect-drupal.min.js" : "detect-drupal.js",
-  });
+for (const [entry, file] of [
+  ["classic", "detect-drupal"],
+  ["classic-passive", "detect-drupal.passive"],
+] as const) {
+  for (const minify of [false, true]) {
+    await build({
+      entrypoints: [join(ROOT, `src/${entry}.ts`)],
+      outdir: DIST,
+      format: "iife",
+      minify,
+      naming: minify ? `${file}.min.js` : `${file}.js`,
+    });
+  }
 }
 
 // Declarations: emit with tsc, then flatten into self-contained files so the
@@ -54,12 +62,14 @@ if (tsc.exitCode !== 0) process.exit(tsc.exitCode ?? 1);
 const strip = (f: string) =>
   readFileSync(join(TYPES, f), "utf8")
     .replace(/^import .*;\n/gm, "")
+    .replace(/^export (?:type )?\{[^}]*\} from .*;\n?/gm, "")
     .replace(/^export \{\};\n?/gm, "")
     .replace(/^\/\/# sourceMappingURL.*$/gm, "")
     .trim();
 const core = ["types.d.ts", "detect.d.ts"].map(strip).join("\n\n");
 const decls: Record<string, string> = {
   index: `${core}\n\n${strip("register.d.ts")}\n\nexport default detectDrupal;\n`,
+  passive: `${strip("types.d.ts")}\n\n${strip("passive-only.d.ts")}\n`,
   global: `${core}\n\nexport default detectDrupal;\n\ntype DetectDrupalFn = typeof detectDrupal;\n\ndeclare global {\n  var detectDrupal: DetectDrupalFn;\n}\n`,
 };
 for (const [name, body] of Object.entries(decls)) {

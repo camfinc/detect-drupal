@@ -1,5 +1,6 @@
 import { FINGERPRINTS } from "./fingerprints.generated";
 import { assetHash } from "./hash";
+import { PROBES } from "./probes.generated";
 import { isObj, parts, safe, W_EXACT, W_PRERELEASE, W_PROBE, W_PROBE_MISSING, type State } from "./passive";
 import type { DetectDepth, DetectDrupalOptions } from "./types";
 
@@ -81,7 +82,7 @@ let hashIndexCache: Map<string, Map<number, string>> | undefined;
 function hashIndex(): Map<string, Map<number, string>> {
   if (hashIndexCache) return hashIndexCache;
   hashIndexCache = new Map();
-  for (const [path, hashes] of Object.entries(FINGERPRINTS.probes)) {
+  for (const [path, hashes] of Object.entries(PROBES)) {
     const byRelease = new Map<number, string>();
     for (const [h, ranges] of Object.entries(hashes)) {
       for (let r = 0; r < ranges.length; r += 2) for (let i = ranges[r]!; i <= ranges[r + 1]!; i++) byRelease.set(i, h);
@@ -146,7 +147,7 @@ export async function probe(st: State, options: DetectDrupalOptions, depth: Dete
       }
       continue;
     }
-    const ranges = FINGERPRINTS.probes[path]![assetHash(text)];
+    const ranges = PROBES[path]![assetHash(text)];
     if (!ranges) {
       st.evidence.push(`probe ${path}: unknown content (patched, or newer than the fingerprint data)`);
       continue;

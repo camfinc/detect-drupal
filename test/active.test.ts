@@ -1,7 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import { Window } from "happy-dom";
 import { detectDrupal } from "../src/index";
-import { FINGERPRINTS } from "../src/fingerprints.generated";
+import { PROBES } from "../src/probes.generated";
 
 type Routes = Record<string, { status?: number; body: string; type?: string }>;
 
@@ -89,7 +89,7 @@ describe("exact-version files (deep)", () => {
 
 describe("hash probes", () => {
   test("a 200 HTML catch-all page counts as missing, not as a match", async () => {
-    const path = Object.keys(FINGERPRINTS.probes)[0]!;
+    const path = Object.keys(PROBES)[0]!;
     const { fetch } = stubFetch({ ["/" + path]: { body: "<!doctype html><html><body>Home</body></html>", type: "text/html; charset=utf-8" } });
     const r = await detectDrupal({ depth: "light", baseUrl: "https://site.test/", fetch });
     expect(r.isDrupal).toBe(false);
@@ -97,7 +97,7 @@ describe("hash probes", () => {
 
   test("an unknown (patched) file is reported but does not constrain", async () => {
     const routes: Routes = {};
-    for (const p of Object.keys(FINGERPRINTS.probes)) routes["/" + p] = { body: "/* patched */" };
+    for (const p of Object.keys(PROBES)) routes["/" + p] = { body: "/* patched */" };
     const r = await detectDrupal({ depth: "light", baseUrl: "https://site.test/", fetch: stubFetch(routes).fetch });
     expect(r.evidence.some((e) => e.includes("unknown content"))).toBe(true);
     expect(r.versionRange).toBeNull();

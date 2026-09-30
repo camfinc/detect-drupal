@@ -1,19 +1,6 @@
 import { probe } from "./active";
-import { collect, verdict } from "./passive";
+import { collect, failed, verdict } from "./passive";
 import type { ActiveOptions, DetectDrupalOptions, DrupalDetection, PassiveOptions } from "./types";
-
-function failed(e: unknown): DrupalDetection {
-  // Pages can define hostile getters/proxies; never break the host page.
-  return {
-    isDrupal: false,
-    version: null,
-    major: null,
-    versionRange: null,
-    confidence: 0,
-    evidence: [`detection error: ${e instanceof Error ? e.message : String(e)}`],
-    requests: 0,
-  };
-}
 
 /**
  * Detect whether the current page is a Drupal site and, where possible, which core version.

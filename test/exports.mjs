@@ -45,4 +45,28 @@ const active = await pending;
 assert.equal(active.requests, seen.length);
 assert.ok(active.requests > 0 && active.requests <= 2);
 
+// Passive-only entry (ESM + CJS): synchronous, and never touches the network even if asked to.
+const neverFetch = async () => {
+  throw new Error("passive build must not fetch");
+};
+for (const mod of [await import(resolve("./passive", "import")), require(resolve("./passive", "require").pathname)]) {
+  assert.equal(typeof mod.detectDrupal, "function");
+  assert.equal(mod.default, mod.detectDrupal);
+  const r = mod.detectDrupal({ window: {}, depth: "deep", baseUrl: "https://site.test/", fetch: neverFetch });
+  assert.equal(typeof r.then, "undefined", "passive build must stay synchronous");
+  assert.equal(r.requests, 0);
+  assert.ok(r.evidence.some((e) => e.includes("passive-only")));
+}
+
+// Injectable passive classic script: registers the global, no network, no probe table.
+const passiveSrc = readFileSync(resolve("./classic-passive"), "utf8");
+assert.ok(!/\bfetch\b/.test(passiveSrc), "passive classic build contains fetch code");
+assert.ok(!passiveSrc.includes("core/misc/ajax.js"), "passive classic build contains the probe table");
+const pctx = vm.createContext({ URL });
+vm.runInContext(passiveSrc, pctx);
+assert.equal(typeof pctx.detectDrupal, "function");
+const pr = pctx.detectDrupal({ depth: "deep", baseUrl: "https://site.test/", fetch: neverFetch });
+assert.equal(typeof pr.then, "undefined");
+assert.equal(pr.requests, 0);
+
 console.log("All entry points OK:", Object.keys(pkg.exports).join(", "));
